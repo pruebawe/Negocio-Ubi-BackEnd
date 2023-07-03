@@ -35,5 +35,5 @@ public class User {
     @Column(name="tipo_usuario")
     @NotNull
     @Enumerated(EnumType.ORDINAL)
-    private TipoUsuario tipo_usuario;
+    private TipoUsuario tipoUsuario;
 }
