@@ -75,7 +75,14 @@ public class CUser {
         return new ResponseEntity<>(new Mensaje("Usuario actualizado"), HttpStatus.OK);
     }
 
-
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<?> delete(@PathVariable("id") Long id){
+        if(!sUser.existsById(id)){
+            return new ResponseEntity<>(new Mensaje ("No existe el ID"), HttpStatus.NOT_FOUND);
+        }
+        sUser.delete(id);
+        return new ResponseEntity<>(new Mensaje("Persona eliminada"), HttpStatus.OK);
+    }
 
 
 }
