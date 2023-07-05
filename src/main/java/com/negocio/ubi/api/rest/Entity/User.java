@@ -36,4 +36,10 @@ public class User {
     @NotNull
     @Enumerated(EnumType.ORDINAL)
     private TipoUsuario tipoUsuario;
+
+    public User(String nombre, String mail, TipoUsuario tipoUsuario) {
+        this.nombre = nombre;
+        this.mail = mail;
+        this.tipoUsuario = tipoUsuario;
+    }
 }
