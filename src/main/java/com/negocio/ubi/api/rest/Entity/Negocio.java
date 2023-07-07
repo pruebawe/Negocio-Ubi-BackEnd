@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.math.BigDecimal;
+import java.sql.Time;
 
 @Entity(name = "negocio")
 @Table(name = "negocios")
@@ -43,10 +43,17 @@ public class Negocio {
     @Column(name = "horariofin")
     private java.sql.Time horarioFin;
 
-    @Column(name = "radiomaximo", precision = 5, scale = 2, nullable = false)
-    private Double radioMaximo;
-
     @ManyToOne
     @JoinColumn(name = "id", nullable = false)
     private User user;
+
+    public Negocio(String nombre, String descripcion, String direccion, Double latitud, Double longitud, Time horarioInicio, Time horarioFin) {
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.direccion = direccion;
+        this.latitud = latitud;
+        this.longitud = longitud;
+        this.horarioInicio = horarioInicio;
+        this.horarioFin = horarioFin;
+    }
 }

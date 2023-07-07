@@ -36,9 +36,6 @@ public class DtoNegocio {
     @Column(name = "horariofin")
     private java.sql.Time horarioFin;
 
-    @Column(name = "radiomaximo", precision = 5, scale = 2, nullable = false)
-    private Double radioMaximo;
-
     @ManyToOne
     @JoinColumn(name = "id", nullable = false)
     private User user;

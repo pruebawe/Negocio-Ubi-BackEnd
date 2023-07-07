@@ -81,7 +81,7 @@ public class CUser {
             return new ResponseEntity<>(new Mensaje ("No existe el ID"), HttpStatus.NOT_FOUND);
         }
         sUser.delete(id);
-        return new ResponseEntity<>(new Mensaje("Persona eliminada"), HttpStatus.OK);
+        return new ResponseEntity<>(new Mensaje("Usuario eliminada"), HttpStatus.OK);
     }
 
 
