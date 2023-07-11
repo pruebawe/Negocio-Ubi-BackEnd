@@ -10,7 +10,7 @@ import java.util.Optional;
 @Repository
 public interface NRepository extends JpaRepository<Negocio, Long> {
 
-    public Optional<Negocio> fyndByNombre(String nombre);
+    public Optional<Negocio> findByNombre(String nombre);
     public boolean existsByNombre(String nombre);
 
 }

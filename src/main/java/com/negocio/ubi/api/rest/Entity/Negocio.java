@@ -44,7 +44,7 @@ public class Negocio {
     private java.sql.Time horarioFin;
 
     @ManyToOne
-    @JoinColumn(name = "id", nullable = false)
+    @JoinColumn(name = "user_Id", nullable = false)
     private User user;
 
     public Negocio(String nombre, String descripcion, String direccion, Double latitud, Double longitud, Time horarioInicio, Time horarioFin) {

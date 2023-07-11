@@ -24,7 +24,7 @@ public class SUser {
     }
 
     public Optional<User> getByNombre(String nombre){
-        return uRepository.fyndByNombre(nombre);
+        return uRepository.findByNombre(nombre);
     }
 
     public void save (User user){

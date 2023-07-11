@@ -56,7 +56,7 @@ public class CUser {
             return new ResponseEntity<>(new Mensaje("No existe el Id"), HttpStatus.BAD_REQUEST);
         }
 
-        if(sUser.existsByNombre(dtoUser.getNombre()) && sUser.getByNombre(dtoUser.getNombre()).get().getId() !=id){
+        if(sUser.existsByNombre(dtoUser.getNombre()) && sUser.getByNombre(dtoUser.getNombre()).get().getUserId() !=id){
             return new ResponseEntity<>(new Mensaje("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
         }
 

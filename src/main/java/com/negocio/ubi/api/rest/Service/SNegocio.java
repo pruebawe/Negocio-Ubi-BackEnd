@@ -26,7 +26,7 @@ public class SNegocio {
     }
 
     public Optional<Negocio> getByNombre(String nombre){
-        return nRepository.fyndByNombre(nombre);
+        return nRepository.findByNombre(nombre);
     }
 
     public void save (Negocio negocio){
