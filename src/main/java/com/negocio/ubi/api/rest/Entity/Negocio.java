@@ -31,10 +31,10 @@ public class Negocio {
     @Column(name = "direccion", nullable = false)
     private String direccion;
 
-    @Column(name = "latitud", precision = 9, scale = 6, nullable = false)
+    @Column(name = "latitud", nullable = false)
     private Double latitud;
 
-    @Column(name = "longitud", precision = 9, scale = 6, nullable = false)
+    @Column(name = "longitud", nullable = false)
     private Double longitud;
 
     @Column(name = "horarioinicio")
